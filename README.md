@@ -63,28 +63,3 @@ Run any program with:
 | 9   | Experiment9.cpp   | Naive String Search                                  | Reports all starting indices |
 | 10  | Experiment10.cpp  | KMP String Matching                                  | LPS preprocessing + linear-time search |
 
-## Usage Examples
-- Quick Sort:
-  1) Build and run `Experiment5.exe`
-  2) Enter `n` and the list of `n` integers when prompted
-  3) View sorted output
-
-- Subset Sum (Experiment 6):
-  1) Build and run `Experiment6.exe`
-  2) Enter `n`, then `n` integers, then the target sum
-  3) Program prints whether a subset with the target sum exists
-
-- String Matching:
-  - Naive (`Experiment9.exe`) and KMP (`Experiment10.exe`) both prompt for text and pattern and print all match positions (0-based indices).
-
-## Notes and Tips
-- Input with `getline`: Experiments 9 and 10 use `getline`. If you adapt these programs to mix `cin >>` and `getline`, add `cin.ignore(numeric_limits<streamsize>::max(), '\n');` before the first `getline` after formatted extraction to clear the buffer.
-- Directed vs Undirected (Dijkstra): `Experiment8.cpp` currently adds edges both ways. Remove the second `push_back` to treat the graph as directed, as commented in the file.
-- Experiment 7 (0-1 Knapsack): The file header says 0-1 Knapsack, but the current implementation matches a Subset Sum check (boolean feasibility). To extend to true 0-1 Knapsack, replace it with a value-maximizing DP over weights.
-
-## Troubleshooting
-- "command not found" or `g++` missing: Install MinGW-w64 and ensure `g++` is on your PATH.
-- Build errors: Use `-std=gnu++17` (or `-std=c++17`). Ensure you run the command in the folder containing the `.cpp` files.
-
----
-Happy coding! If you want, I can also add a simple `build.ps1` script to compile all experiments into a `bin/` folder. 
